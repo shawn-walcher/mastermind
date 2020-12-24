@@ -1,0 +1,16 @@
+.led {
+  width: 20px;
+  height: 20px;
+}
+
+.red {
+  fill: red;
+}
+
+.gray {
+  fill: gray;
+}
+
+.white {
+  fill: white;
+}
