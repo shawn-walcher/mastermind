@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
+import './css/App.css';
 import Main from './Main';
 import Win from './Win';
 function App() {

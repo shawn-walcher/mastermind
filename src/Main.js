@@ -1,28 +1,29 @@
 import React from "react";
-import { ReactComponent as StatusLight } from './circle.svg';
-import Guess from './Guess';
-import './main.css';
+import { useHistory } from "react-router-dom";
+import Guess from "./Guess";
+
+import { ReactComponent as StatusLight } from "./assets/circle.svg";
+import "./css/main.css";
 
 const Main = () => {
+  const history = useHistory();
 
   return (
     <div>
       <div>
         <h3>Legend:</h3>
         <div>
-        How many with no match: 
-        <StatusLight className={`led gray`}/>
+          How many with no match:
+          <StatusLight className={`led gray`} />
         </div>
         <div>
-        How many with correct number wrong location: 
-        <StatusLight className={`led white`}/>
+          How many with correct number wrong location:
+          <StatusLight className={`led white`} />
         </div>
         <div>
-        How many with correct number correct location:
-        <StatusLight className={`led red`}/>
+          How many with correct number correct location:
+          <StatusLight className={`led red`} />
         </div>
-        <br />
-        <br />
         <br />
       </div>
       <Guess />
@@ -30,7 +31,11 @@ const Main = () => {
       <Guess />
       <Guess />
       <Guess />
-      </div>
+      <br />
+      <form>
+        <button type="submit" onClick={(e)=> history.push('/')}>Restart</button>
+      </form>
+    </div>
   );
 };
 

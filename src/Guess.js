@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { ReactComponent as StatusLight } from './circle.svg';
-import './main.css';
+import { ReactComponent as StatusLight } from './assets/circle.svg';
+import './css/main.css';
 
 const Guess = () => {
   const history = useHistory();
@@ -60,6 +60,7 @@ const Guess = () => {
           max="9"
           name="number1"
           value={guess[0]}
+          disabled={shouldDisable}
           onChange={(e) => setGuess([e.target.value, guess[1], guess[2]])}
         />
         <label for="number2">{guess[1]}</label>
@@ -69,6 +70,7 @@ const Guess = () => {
           max="9"
           name="number2"
           value={guess[1]}
+          disabled={shouldDisable}
           onChange={(e) => setGuess([guess[0], e.target.value, guess[2]])}
         />
         <label for="number3">{guess[2]}</label>
@@ -78,6 +80,7 @@ const Guess = () => {
           max="9"
           name="number3"
           value={guess[2]}
+          disabled={shouldDisable}
           onChange={(e) => setGuess([guess[0], guess[1], e.target.value])}
         />
         <button type="submit" disabled={shouldDisable} onClick={(e)=>submitted(e)}>Guess</button>
