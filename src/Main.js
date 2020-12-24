@@ -9,23 +9,28 @@ const Main = () => {
   const history = useHistory();
 
   return (
-    <div>
+    <div className="main">
       <div>
         <h3>Legend:</h3>
-        <div>
-          How many with no match:
-          <StatusLight className={`led gray`} />
-        </div>
-        <div>
-          How many with correct number wrong location:
-          <StatusLight className={`led white`} />
-        </div>
-        <div>
-          How many with correct number correct location:
-          <StatusLight className={`led red`} />
+        <div className="legend">
+          The 3 lights don't indicate location, just how many.
+          <div>
+            No match:
+            <StatusLight className={`led gray`} />
+            Correct number in wrong location:
+            <StatusLight className={`led white`} />
+            Correct:
+            <StatusLight className={`led red`} />
+          </div>
         </div>
         <br />
       </div>
+      <hr />
+      <Guess />
+      <Guess />
+      <Guess />
+      <Guess />
+      <Guess />
       <Guess />
       <Guess />
       <Guess />
@@ -33,7 +38,9 @@ const Main = () => {
       <Guess />
       <br />
       <form>
-        <button type="submit" onClick={(e)=> history.push('/')}>Restart</button>
+        <button type="submit" onClick={(e) => history.push("/")}>
+          Restart
+        </button>
       </form>
     </div>
   );

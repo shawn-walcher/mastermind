@@ -83,7 +83,7 @@ const Guess = () => {
           disabled={shouldDisable}
           onChange={(e) => setGuess([guess[0], guess[1], e.target.value])}
         />
-        <button type="submit" disabled={shouldDisable} onClick={(e)=>submitted(e)}>Guess</button>
+        <button className="button" type="submit" disabled={shouldDisable} onClick={(e)=>submitted(e)}>Guess</button>
 
         <StatusLight className={`led ${led1[2]}`}/>
         <StatusLight className={`led ${led1[1]}`}/>

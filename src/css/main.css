@@ -1,6 +1,7 @@
 .led {
   width: 20px;
   height: 20px;
+  padding: 0 5px 0;
 }
 
 .red {
@@ -13,4 +14,21 @@
 
 .white {
   fill: white;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.main > div {
+  padding-top: 10px;
+}
+
+.legend > div > .led {
+  padding-right: 20px;
+}
+
+.button {
+  margin: 0 5px 0 10px;
 }
