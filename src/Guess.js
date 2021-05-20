@@ -5,7 +5,7 @@ import './css/main.css';
 
 const Guess = () => {
   const history = useHistory();
-  let combo = ["5", "4", "9"];
+  let combo = ["2", "8", "3"];
   const [guess, setGuess] = useState(["0", "0", "0"]);
   const [led1, setLed1] = useState(["gray", "gray", "gray"]);
   const [shouldDisable, setShouldDisable] = useState(false);
