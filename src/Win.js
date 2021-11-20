@@ -22,7 +22,7 @@ const Win = () => {
   return (
     <div className="Confet">
       <h1>You Win</h1>
-      <h1>Combo = 5 4 9</h1>
+      <h1>Combo = 2 8 3</h1>
       <Confetti
         angle="45"
         spread="360"
